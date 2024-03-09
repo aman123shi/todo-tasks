@@ -12,7 +12,6 @@ export class Todo {
   @Column()
   description: string;
 
-  @Column()
   @OneToMany(() => Task, (task) => task.todo)
   tasks: Task[];
 

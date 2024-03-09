@@ -9,7 +9,6 @@ export class Task {
   @Column()
   name: string;
 
-  @Column()
   @ManyToOne(() => Todo, (todo) => todo.tasks)
   todo: Todo;
 

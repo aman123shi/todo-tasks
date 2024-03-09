@@ -13,7 +13,7 @@ import { TaskModule } from './task/task.module';
       port: 5432,
       username: 'postgres',
       password: '',
-      database: 'todo',
+      database: 'postgres',
       entities: [],
       autoLoadEntities: true,
       synchronize: true,
