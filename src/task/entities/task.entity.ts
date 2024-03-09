@@ -10,7 +10,7 @@ export class Task {
   name: string;
 
   @ManyToOne(() => Todo, (todo) => todo.tasks)
-  todo: Todo;
+  todo: number;
 
   @Column({ default: true })
   isActive: boolean;

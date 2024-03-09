@@ -7,7 +7,7 @@ export class TaskDto {
   name: string;
 
   @IsNotEmpty()
-  todoId: number;
+  todo: number;
 
   @IsBoolean()
   isActive: boolean;

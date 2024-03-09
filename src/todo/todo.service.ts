@@ -13,11 +13,15 @@ export class TodoService {
   ) {}
 
   async findAll(): Promise<Todo[]> {
-    return this.todoRepository.find();
+    return this.todoRepository.find({ relations: { tasks: true } });
   }
 
   async findOne(id: number): Promise<Todo> {
-    return this.todoRepository.findOneBy({ id });
+    const task = await this.todoRepository.find({
+      where: { id },
+      relations: { tasks: true },
+    });
+    return task[0];
   }
 
   async create(todo: TodoDto): Promise<Todo> {
